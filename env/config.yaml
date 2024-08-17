@@ -1,0 +1,51 @@
+act_range: [-1, 1]
+default_pos: [1, -1, 0, 1, -1, 0, 1, -1, 0, 1, -1, 0]
+servos:
+  - name: "Rear Left Elbow"
+    idx: 0
+    range: [180, 40]
+    pwm_range: [500, 2500]
+  - name: "Rear Left Sagittal"
+    idx: 1
+    range: [180, 0]
+    pwm_range: [500, 2500]
+  - name: "Rear Left Shoulder"
+    idx: 2
+    range: [160, 20]
+    pwm_range: null
+  - name: "Front Left Elbow"
+    idx: 4
+    range: [180, 48]
+    pwm_range: [500, 2500]
+  - name: "Front Left Sagittal"
+    idx: 5
+    range: [180, 0]
+    pwm_range: [500, 2500]
+  - name: "Front Left Shoulder"
+    idx: 6
+    range: [160, 58]
+    pwm_range: null
+  - name: "Front Right Elbow"
+    idx: 9
+    range: [0, 136]
+    pwm_range: [500, 2500]
+  - name: "Front Right Sagittal"
+    idx: 8
+    range: [20, 180]
+    pwm_range: [500, 2500]
+  - name: "Front Right Shoulder"
+    idx: 10
+    range: [0, 110]
+    pwm_range: null
+  - name: "Rear Right Elbow"
+    idx: 12
+    range: [6, 150]
+    pwm_range: [500, 2500]
+  - name: "Rear Right Sagittal"
+    idx: 13
+    range: [50, 180]
+    pwm_range: [500, 2500]
+  - name: "Rear Right Shoulder"
+    idx: 14
+    range: [40, 132]
+    pwm_range: null
