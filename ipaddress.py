@@ -45,17 +45,18 @@ def main():
     sleep(15)
     address = get_local_ip()
 
-    subject = "Spotty's IP Address"
-    body = f"Hey Alejandrito :D My IP Address is {address}"
-    sender = os.environ["SENDER_EMAIL"]
-    recipients = [os.environ["RECEIVER_EMAIL"]]
-    password = os.environ["SENDER_PWD"]
     scroll(address)
 
-    try:
-        send_email(subject, body, sender, recipients, password)
-    except Exception:
-        print("Could not send email")
+    # subject = "Spotty's IP Address"
+    # body = f"Hey Alejandrito :D My IP Address is {address}"
+    # sender = os.environ["SENDER_EMAIL"]
+    # recipients = [os.environ["RECEIVER_EMAIL"]]
+    # password = os.environ["SENDER_PWD"]
+
+    # try:
+    #     send_email(subject, body, sender, recipients, password)
+    # except Exception:
+    #     print("Could not send email")
 
 if __name__ == "__main__":
     main()
