@@ -1,9 +1,8 @@
 
 # Importing Libraries 
 import serial
-import time 
 
-from utils import transform_dist_sensor, transform_angle
+from spotty.utils import transform_dist_sensor, transform_angle
 
 class SensorRetriever:
     # MSG STRUCTURE
