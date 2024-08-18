@@ -11,7 +11,6 @@ import threading
 import time
 import plotly.express as px
 import plotly.graph_objects as go
-from env import SpottyEnv
 from PIL import Image
 
 class NumpyEncoder(json.JSONEncoder):
@@ -25,9 +24,8 @@ class NumpyEncoder(json.JSONEncoder):
         return super(NumpyEncoder, self).default(obj)
 
 class DashEnvironmentWrapper(Env):
-    def __init__(self, env, max_length=1000, host='127.0.0.1', port=8050, update_interval=1000):
-        # self.env = gym.make(env_name)
-        self.env = env
+    def __init__(self, env_name, max_length=1000, host='127.0.0.1', port=8050, update_interval=1000):
+        self.env = gym.make(env_name)
         self.observation_space = self.env.observation_space
         self.action_space = self.env.action_space
         
@@ -180,8 +178,7 @@ class DashEnvironmentWrapper(Env):
 
 # Usage
 if __name__ == "__main__":
-    spotty_env = SpottyEnv()
-    env = DashEnvironmentWrapper(spotty_env, 
+    env = DashEnvironmentWrapper("Spotty-v0", 
                                  max_length=1000,
                                  host='0.0.0.0',
                                  port=8050,

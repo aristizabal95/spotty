@@ -5,8 +5,8 @@ import board
 import busio
 import numpy as np
 
-from video_capture import VideoCapture
-from sensor_retriever import SensorRetriever
+from spotty.video_capture import VideoCapture
+from spotty.sensor_retriever import SensorRetriever
 
 
 class SpottyEnv(Env):
